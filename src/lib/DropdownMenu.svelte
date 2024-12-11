@@ -24,13 +24,13 @@
 			menuItems: [
                 { name: 'Parish Directory 🔒', href: '/parish-directory' },
 				{
-					name: 'Monthly Calendar ➡︎',
+					name: 'Monthly Calendar',
 					href: 'https://www.google.com/calendar/embed?title=Calendar&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=dbb89q1e39rpomrlk7v8l5k2ug%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York'
 				},
-				{ name: 'Streaming ➡︎', href: 'https://www.youtube.com/channel/UCHl_paxhbDwNqv2MOZxU2jg' },
-				{ name: 'Readings ➡︎', href: 'https://oca.org/readings' },
-				{ name: 'Tipic ➡︎', href: 'https://roea.org/calendartipicpaschalia' },
-				{ name: 'Episcopate ➡︎', href: 'https://roea.org/' }
+				{ name: 'Streaming', href: 'https://www.youtube.com/channel/UCHl_paxhbDwNqv2MOZxU2jg' },
+				{ name: 'Readings', href: 'https://oca.org/readings' },
+				{ name: 'Tipic', href: 'https://roea.org/calendartipicpaschalia' },
+				{ name: 'Episcopate', href: 'https://roea.org/' }
 			]
 		}
 	];
@@ -52,7 +52,7 @@
 		{#if menu.menuItems}
 			<ul class="dropdown-content">
 				{#each menu.menuItems as item}
-					<li><a href="/{item.href}">{item.name}</a></li>
+					<li><a href="/{item.href}">{item.name} {#if item.href.startsWith('http')} ➡︎{/if}</a></li>
 				{/each}
 			</ul>
 		{/if}
