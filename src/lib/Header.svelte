@@ -1,49 +1,14 @@
+<script>
+	import DropdownMenu from './DropdownMenu.svelte';
+</script>
+
 <div class="banner">
 	<p>Sunday Service Hours: Matins @ 8:40am | Divine Liturgy @ 10:00am</p>
 </div>
 <nav class="navbar">
-	<div class="nav-left">
-		<ul class="nav-item">
-			<li><a href="/home">Home</a></li>
-		</ul>
-		<ul class="nav-item">
-			<li>
-				<a href="/about">About</a>
-				<ul class="dropdown-content">
-					<li><a href="/contact">Contact</a></li>
-					<li><a href="/leadership">Leadership</a></li>
-					<li><a href="/youth">Youth</a></li>
-					<li><a href="/music">Music</a></li>
-				</ul>
-			</li>
-		</ul>
-		<ul class="nav-item">
-			<li><a href="/donate">Donate</a></li>
-		</ul>
-		<ul class="nav-item">
-			<li><a href="/school">School</a></li>
-		</ul>
-		<ul class="nav-item">
-			<li>
-				<a href="/resources">Resources</a>
-				<ul class="dropdown-content">
-					<li><a href="/parish-directory">Parish Directory 🔒</a></li>
-					<li>
-						<a
-							href="https://www.google.com/calendar/embed?title=Calendar&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=dbb89q1e39rpomrlk7v8l5k2ug%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York"
-							>Monthly Calendar ➡︎</a
-						>
-					</li>
-					<li>
-						<a href="https://www.youtube.com/channel/UCHl_paxhbDwNqv2MOZxU2jg">Streaming ➡︎</a>
-					</li>
-					<li><a href="https://oca.org/readings">Readings ➡︎</a></li>
-					<li><a href="https://roea.org/calendartipicpaschalia">Tipic ➡︎</a></li>
-					<li><a href="https://roea.org/">Episcopate ➡︎</a></li>
-				</ul>
-			</li>
-		</ul>
-	</div>
+	<ul class="nav-left">
+		<DropdownMenu />
+	</ul>
 	<div class="nav-right">
 		<a
 			class="icon social-icon social-icon-youtube"
@@ -60,7 +25,7 @@
 				></path></svg
 			>
 		</a>
-		<input type="text" class="search-box" placeholder="Search..." />
+		<!-- <input type="text" class="search-box" placeholder="Search..." /> -->
 	</div>
 </nav>
 
@@ -77,7 +42,6 @@
 		font-size: var(--font-size-small);
 	}
 	.navbar {
-		width: 100%;
 		height: 100px;
 		background-color: var(--color-background);
 		display: flex;
@@ -89,38 +53,10 @@
 		padding: 0 20px;
 		font-family: var(--body-font);
 	}
-	a {
-		text-decoration: none;
-		text-transform: uppercase;
-		font-weight: var(--font-weight-heavy);
-		font-size: 16px;
-	}
 	.nav-left,
 	.nav-right {
 		display: flex;
 		align-items: center;
-	}
-	.nav-item {
-		margin: 0 10px;
-		position: relative;
-	}
-	.dropdown-content {
-		display: none;
-		position: absolute;
-		background-color: white;
-		box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-		z-index: 1;
-		margin-top: 40px;
-		padding: 10px;
-		border-radius: var(--border-radius-s);
-	}
-
-	.dropdown-content li {
-		margin-top: 10px;
-	}
-
-	.nav-item:hover .dropdown-content {
-		display: block;
 	}
 	.search-box {
 		padding: 5px;
