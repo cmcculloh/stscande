@@ -1,16 +1,16 @@
 <script>
-    import { page } from '$app/stores';
+	import { page } from '$app/stores';
 	const menus = [
 		{
-			item: { name: 'Home', href: '/' },
+			item: { name: 'Home', href: '/home' }
 		},
 		{
 			item: { name: 'About', href: '/about' },
 			menuItems: [
-				{ name: 'Contact', href: '/contact' },
-				{ name: 'Leadership', href: '/leadership' },
-				{ name: 'Youth', href: '/youth' },
-				{ name: 'Music', href: '/music' }
+				{ name: 'Contact', href: '/about/contact' },
+				{ name: 'Leadership', href: '/about/leadership' },
+				{ name: 'Youth', href: '/about/youth' },
+				{ name: 'Music', href: '/about/music' }
 			]
 		},
 		{
@@ -22,7 +22,7 @@
 		{
 			item: { name: 'Resources', href: '/resources' },
 			menuItems: [
-                { name: 'Parish Directory 🔒', href: '/parish-directory' },
+				{ name: 'Parish Directory 🔒', href: '/resources/parish-directory' },
 				{
 					name: 'Monthly Calendar',
 					href: 'https://www.google.com/calendar/embed?title=Calendar&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=dbb89q1e39rpomrlk7v8l5k2ug%40group.calendar.google.com&amp;color=%232952A3&amp;ctz=America%2FNew_York'
@@ -34,15 +34,28 @@
 			]
 		}
 	];
+
+	const isActive = (path) => {
+		if (path === '/') {
+			return $page.url.pathname === '/';
+		}
+		return $page.url.pathname.startsWith(path);
+	};
 </script>
 
 {#each menus as menu}
 	<li class="nav-item">
-		<a class="{$page.url.pathname === menu.item.href ? 'active' : ''}" href="{menu.item.href}">{menu.item.name}</a>
+		<a class={isActive(menu.item.href) ? 'active' : ''} href={menu.item.href}>{menu.item.name}</a>
 		{#if menu.menuItems}
 			<ul class="dropdown-content">
 				{#each menu.menuItems as item}
-					<li><a href="/{item.href}">{item.name} {#if item.href.startsWith('http')} ➡︎{/if}</a></li>
+					<li>
+						<a class={isActive(item.href) ? 'active' : ''} href={item.href}
+							>{item.name}
+							{#if item.href.startsWith('http')}
+								➡︎{/if}</a
+						>
+					</li>
 				{/each}
 			</ul>
 		{/if}
@@ -60,37 +73,35 @@
 		list-style: none;
 		position: relative;
 		display: flex;
-        flex-direction: column;
+		flex-direction: column;
 		margin: 0 10px;
-        box-sizing: border-box;
-        vertical-align: baseline;
+		box-sizing: border-box;
+		vertical-align: baseline;
 	}
 	.dropdown-content {
 		visibility: hidden;
-        opacity: 0;
+		opacity: 0;
 		position: absolute;
 		background-color: white;
 		z-index: 1;
-		margin-top: 20px;
+		margin-top: 0px;
 		padding: 0px 30px 30px;
 		border-radius: 0 0 var(--border-radius-s) var(--border-radius-s);
 		min-width: 200px;
 		top: 100%;
-        z-index: 99999;
-        left: -20px;
-        border-bottom: 1px solid #eee;
-        transition: visibility .3s ease-in-out, opacity .3s ease-in-out;
-        box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
+		z-index: 99999;
+		left: -20px;
+		border-bottom: 1px solid #eee;
+		transition:
+			visibility 0.3s ease-in-out,
+			opacity 0.3s ease-in-out;
+		box-shadow: 0 1px 0px rgba(0, 0, 0, 0.1);
 	}
 
 	.dropdown-content li {
 		margin-top: 20px;
 		list-style: none;
 	}
-
-    .dropdown-content li:first-of-type {
-        margin-top: 0;
-    }
 
 	.nav-item:hover .dropdown-content,
 	.nav-item:focus-within .dropdown-content {
