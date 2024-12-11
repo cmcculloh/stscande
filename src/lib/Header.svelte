@@ -52,6 +52,9 @@
 		box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 		padding: 0 20px;
 		font-family: var(--body-font);
+		position: sticky;
+		top: 0;
+		z-index: 1000;
 	}
 	.nav-left,
 	.nav-right {
