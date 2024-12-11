@@ -1,0 +1,165 @@
+/* Epilogue font is the normal body font, header font, and button font */
+
+
+/* This is the font used for "Matins: Sunday at 8:40am" */
+@font-face {
+    font-family: 'Dm Sans Local';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/fonts/DMSans-Medium.woff2') format('woff2'), url('/fonts/DMSans-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dm Sans Local';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/DMSans-Bold.woff2') format('woff2'), url('/fonts/DMSans-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dm Sans Local';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/DMSans-Regular.woff2') format('woff2'), url('/fonts/DMSans-Regular.woff') format('woff');
+}
+
+
+/* This is the fine print at the very bottom and the banner at the very top */
+@font-face {
+    font-family: 'Poppins Local';
+    font-weight: 400;
+    font-style: normal;
+    src: url('/fonts/Poppins-Regular.woff2') format('woff2'), url('/fonts/Poppins-Regular.woff') format('woff');
+}
+
+/* @font-face {
+    font-family: 'Poppins Local';
+    font-weight: 700;
+    font-style: normal;
+    src: url('/fonts/Poppins-Bold.woff2') format('woff2'), url('/fonts/Poppins-Bold.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins Local';
+    font-weight: 500;
+    font-style: normal;
+    src: url('/fonts/Poppins-Medium.woff2') format('woff2'), url('/fonts/Poppins-Medium.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Poppins Local';
+    font-weight: 600;
+    font-style: normal;
+    src: url('/fonts/Poppins-SemiBold.woff2') format('woff2'), url('/fonts/Poppins-SemiBold.woff') format('woff');
+} */
+
+/* no idea where this is used */
+@font-face {
+    font-family: 'Dm Serif Display Local';
+    font-weight: normal;
+    font-style: italic;
+    src: url('/fonts/DMSerifDisplay-Italic.woff2') format('woff2'), url('/fonts/DMSerifDisplay-Italic.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Dm Serif Display Local';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/DMSerifDisplay-Regular.woff2') format('woff2'), url('/fonts/DMSerifDisplay-Regular.woff') format('woff');
+}
+
+
+/* this is the cursive looking font */
+@font-face {
+    font-family: 'Tangerine Local';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/Tangerine-Regular.woff2') format('woff2'), url('/fonts/Tangerine-Regular.woff') format('woff');
+}
+
+
+
+/* Epilogue font is the normal body font, header font, and button font */
+.epilogue-normal {
+	font-family: 'Epilogue', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: var(--font-normal);
+	font-style: normal;
+}
+.epilogue-bold {
+	font-family: 'Epilogue', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: var(--font-bold);
+	font-style: normal;
+}
+.epilogue-heavy {
+	font-family: 'Epilogue', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: var(--font-heavy);
+	font-style: normal;
+}
+
+/* This is the font used for "Matins: Sunday at 8:40am" */
+.dm-sans-normal {
+	font-family: 'DM Sans Local', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: var(--font-normal);
+	font-style: normal;
+}
+.dm-sans-bold {
+	font-family: 'DM Sans Local', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: var(--font-bold);
+	font-style: normal;
+}
+.dm-sans-heavy {
+	font-family: 'DM Sans Local', sans-serif;
+	font-optical-sizing: auto;
+	font-weight: var(--font-heavy);
+	font-style: normal;
+}
+
+/* This is the tall/thin "Join Us" font */
+.marcellus-regular {
+	font-family: 'Marcellus Local', serif;
+	font-weight: var(--font-normal);
+	font-style: normal;
+}
+
+/* This is the fine print at the very bottom and the banner at the very top */
+.poppins-regular {
+	font-family: 'Poppins Local', sans-serif;
+	font-weight: var(--font-normal);
+	font-style: normal;
+}
+
+.poppins-medium {
+	font-family: 'Poppins Local', sans-serif;
+	font-weight: var(--font-bold);
+	font-style: normal;
+}
+
+.poppins-semibold {
+	font-family: 'Poppins Local', sans-serif;
+	font-weight: var(--font-semi-bold);
+	font-style: normal;
+}
+
+.poppins-bold {
+	font-family: 'Poppins Local', sans-serif;
+	font-weight: var(--font-heavy);
+	font-style: normal;
+}
+
+/* this is the cursive looking font */
+.tangerine-regular {
+	font-family: 'Tangerine Local', cursive;
+	font-weight: var(--font-normal);
+	font-style: normal;
+}
+
+.tangerine-bold {
+	font-family: 'Tangerine Local', cursive;
+	font-weight: var(--font-heavy);
+	font-style: normal;
+}

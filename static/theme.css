@@ -1,0 +1,40 @@
+a {
+	color: var(--color-secondary);
+	font-weight: var(--font-weight-bold);
+}
+
+a:hover,
+a:focus,
+a.active,
+a:active {
+	color: var(--color-primary);
+}
+
+.social-icon {
+	background-color: #02010100;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	cursor: pointer;
+}
+
+.icon {
+	display: inline-block;
+	line-height: 1;
+	transition: all 0.3s;
+	color: #69727d;
+	font-size: 50px;
+	text-align: center;
+}
+
+.social-icon:last-child {
+	margin: 0;
+}
+
+.icon.social-icon {
+	font-size: var(--icon-size, 25px);
+	line-height: var(--icon-size, 25px);
+	width: calc(var(--icon-size, 25px) + 2 * var(--icon-padding, 0.5em));
+	height: calc(var(--icon-size, 25px) + 2 * var(--icon-padding, 0.5em));
+}
