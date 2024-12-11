@@ -1,13 +1,13 @@
 <script>
+    import { page } from '$app/stores';
 	const menus = [
 		{
 			item: { name: 'Home', href: '/' },
-            active: false
 		},
 		{
 			item: { name: 'About', href: '/about' },
 			menuItems: [
-				{ name: 'Contact', href: '/contact', active:false },
+				{ name: 'Contact', href: '/contact' },
 				{ name: 'Leadership', href: '/leadership' },
 				{ name: 'Youth', href: '/youth' },
 				{ name: 'Music', href: '/music' }
@@ -34,21 +34,11 @@
 			]
 		}
 	];
-
-    // determine if the menu item is active based on the current route
-    menus.forEach(menu => {
-        menu.active = menu.item.href === location.pathname;
-        if (menu.menuItems) {
-            menu.menuItems.forEach(item => {
-                item.active = item.href === location.pathname;
-            });
-        }
-    });
 </script>
 
 {#each menus as menu}
 	<li class="nav-item">
-		<a class="{menu.active ? 'active' : ''}" href="/{menu.item.href}">{menu.item.name}</a>
+		<a class="{$page.url.pathname === menu.item.href ? 'active' : ''}" href="{menu.item.href}">{menu.item.name}</a>
 		{#if menu.menuItems}
 			<ul class="dropdown-content">
 				{#each menu.menuItems as item}
