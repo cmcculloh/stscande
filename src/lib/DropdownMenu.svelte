@@ -1,8 +1,8 @@
-<script>
+<script lang="ts">
 	import { page } from '$app/stores';
 	const menus = [
 		{
-			item: { name: 'Home', href: '/home' }
+			item: { name: 'Home', href: '/' }
 		},
 		{
 			item: { name: 'About', href: '/about' },
@@ -35,7 +35,7 @@
 		}
 	];
 
-	const isActive = (path) => {
+	const isActive = (path: string) => {
 		if (path === '/') {
 			return $page.url.pathname === '/';
 		}
