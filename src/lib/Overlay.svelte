@@ -42,4 +42,9 @@
     display: flex;
     gap: 10px;
 }
+
+h1 {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 </style>
