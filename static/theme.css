@@ -60,6 +60,11 @@ a.button {
 	text-decoration: none;
 	align-items: center;
 	justify-content: center;
+	transition: background-color 0.3s;
+}
+
+a.button:hover {
+	background-color: var(--color-alternate);
 }
 
 a.button > svg {
@@ -70,4 +75,17 @@ a.button > svg {
 a.button.accent {
 	background-color: var(--color-accent);
 	color: var(--color-secondary);
+}
+
+a.button.accent:hover {
+	background-color: var(--color-alternate);
+}
+
+a.button.alternate {
+	background-color: var(--color-alternate);
+	color: var(--color-secondary);
+}
+
+a.button.alternate:hover {
+	background-color: var(--color-accent);
 }
