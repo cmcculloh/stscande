@@ -25,7 +25,7 @@
     margin-top: -20px;
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     background-image: url('/img/home-banner.jpg');
     background-size: cover;
@@ -34,6 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 0 0 var(--border-radius-l) var(--border-radius-l);
 }
 
 .content {
