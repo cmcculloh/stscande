@@ -24,6 +24,9 @@
     background-size: cover;
     background-position: center;
     z-index: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .content {
