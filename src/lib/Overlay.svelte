@@ -39,7 +39,8 @@
 
 .content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-start;
+    align-content: flex-start;
     align-items: center;
     width: 100%;
     padding: 20px;
@@ -48,7 +49,8 @@
 
 .buttons {
     display: flex;
-    gap: 10px;
+    gap: 40px;
+    align-self: flex-start;
 }
 
 h1 {
