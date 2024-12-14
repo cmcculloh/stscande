@@ -1,4 +1,5 @@
 <script>
+	import JoinUs from '$lib/JoinUs.svelte';
 	import Overlay from '$lib/Overlay.svelte';
 </script>
 
@@ -9,3 +10,4 @@
 		{ text: "View Livestream", href: 'https://www.youtube.com/channel/UCHl_paxhbDwNqv2MOZxU2jg' }
 	]}
 />
+<JoinUs />
