@@ -44,7 +44,7 @@ a:active {
 }
 
 h1 {
-	font-size: var(--font-size-xxlarge);
+	font-size: var(--font-size-xxl);
 	color: var(--color-alternate);
 	font-family: var(--heading-font);
     font-weight: var(--font-weight-heavy);

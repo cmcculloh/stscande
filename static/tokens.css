@@ -10,12 +10,12 @@
 	--font-weight-semi-bold: 600;
 	--font-weight-heavy: 700;
 
-	--font-size-small: 0.8rem; /* 12.8px */
-	--font-size-normal: 1rem; /* 16px */
-	--font-size-medium: 1.2rem; /* 19.2px */
-	--font-size-large: 1.5rem; /* 24px */
-	--font-size-xlarge: 2rem; /* 32px */
-	--font-size-xxlarge: 4.75rem; /* 76px */
+	--font-size-xs: 0.8rem; /* 12.8px */
+	--font-size-s: 1rem; /* 16px */
+	--font-size-m: 1.2rem; /* 19.2px */
+	--font-size-l: 1.5rem; /* 24px */
+	--font-size-xl: 2rem; /* 32px */
+	--font-size-xxl: 4.75rem; /* 76px */
 
 	--body-font: 'Dm Sans Local', sans-serif;
 	--fine-print-font: 'Poppins Local', sans-serif;
