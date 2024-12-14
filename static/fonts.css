@@ -78,6 +78,13 @@
 }
 
 
+@font-face {
+    font-family: 'Marcellus Local';
+    font-weight: normal;
+    font-style: normal;
+    src: url('/fonts/Marcellus-Regular.woff2') format('woff2'), url('/fonts/Marcellus-Regular.woff') format('woff');
+}
+
 
 /* Epilogue font is the normal body font, header font, and button font */
 .epilogue-normal {
