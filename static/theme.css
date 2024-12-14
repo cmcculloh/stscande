@@ -37,14 +37,14 @@ a:active {
 }
 
 .icon.social-icon {
-	font-size: var(--icon-size, 25px);
-	line-height: var(--icon-size, 25px);
-	width: calc(var(--icon-size, 25px) + 2 * var(--icon-padding, 0.5em));
-	height: calc(var(--icon-size, 25px) + 2 * var(--icon-padding, 0.5em));
+	font-size: var(--icon-size);
+	line-height: var(--icon-size);
+	width: calc(var(--icon-size) + 2 * var(--icon-padding));
+	height: calc(var(--icon-size) + 2 * var(--icon-padding));
 }
 
 h1 {
-	font-size: var(--font-sixe-xxlarge);
+	font-size: var(--font-size-xxlarge);
 	color: var(--color-alternate);
 	font-family: var(--heading-font);
     font-weight: var(--font-weight-heavy);
@@ -54,7 +54,7 @@ a.button {
 	background-color: var(--color-primary);
 	color: var(--color-background);
 	border-radius: var(--border-radius-m);
-	padding: 18px 40px;
+	padding: var(--spacing-m) var(--spacing-l);
 	font-weight: var(--font-weight-semi-bold);
 	width: max-content;
 	text-decoration: none;
@@ -68,8 +68,8 @@ a.button:hover {
 }
 
 a.button > svg {
-	width: 16px;
-	margin-left: 10px;
+	width: var(--button-icon-size);
+	margin-left: var(--spacing-xs);
 }
 
 a.button.accent {

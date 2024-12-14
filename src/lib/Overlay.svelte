@@ -24,7 +24,7 @@
 
 <style>
 	.overlay {
-		margin-top: -20px;
+		margin-top: calc(-1 * var(--spacing-m));
 		position: relative;
 		width: 100%;
 		height: 90vh;
@@ -45,16 +45,16 @@
 		align-content: flex-end;
 		align-items: center;
 		width: 100%;
-		padding: 20px;
+		padding: var(--spacing-m);
 		box-sizing: border-box;
         flex-wrap: wrap;
 	}
 
     .buttons {
 		display: flex;
-		gap: 40px;
+		gap: var(--spacing-l);
 		align-self: flex-start;
-        padding-top: 40px;
+        padding-top: var(--spacing-l);
 
 	}
 
